@@ -416,5 +416,16 @@
       });
   }
 
+  /* ── 하단 ↑ 버튼 ─────────────────────── */
+  function bindToTop() {
+    var btn = $('#toTop');
+    if (!btn) return;
+    var sync = function () { btn.classList.toggle('is-on', window.scrollY > 260); };
+    window.addEventListener('scroll', sync, { passive: true });
+    sync();
+    btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+
   init();
+  bindToTop();
 })();
