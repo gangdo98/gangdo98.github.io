@@ -1,0 +1,218 @@
+{
+  "updated": "2026-11-28",
+  "range": { "start": "2026-10-01", "end": "2027-12-31" },
+  "themes": [
+    { "id": "home",    "label": "집",    "emoji": "🏠", "color": "#C9835B", "deep": "#A85F37", "soft": "#FBEDE2" },
+    { "id": "tosil",   "label": "토실이", "emoji": "🐣", "color": "#E08E9E", "deep": "#B85A70", "soft": "#FCEDF0" },
+    { "id": "work",    "label": "회사",  "emoji": "💼", "color": "#7E96BE", "deep": "#54709C", "soft": "#EDF2FA" },
+    { "id": "family",  "label": "가족",  "emoji": "👨‍👩‍👧", "color": "#6FAE8E", "deep": "#468466", "soft": "#EDF7F1" },
+    { "id": "friends", "label": "친구",  "emoji": "🍻", "color": "#C7A24A", "deep": "#8A6B25", "soft": "#FAF3DF" }
+  ],
+  "items": [
+    {
+      "id": "2026-11-06-birthday",
+      "date": "2026-11-06",
+      "theme": "family",
+      "status": "done",
+      "title": "생일",
+      "memo": "가족과 함께한 하루."
+    },
+    {
+      "id": "2026-11-12-checkup",
+      "date": "2026-11-12",
+      "theme": "family",
+      "status": "done",
+      "title": "종합건강검진 수검",
+      "memo": "대사증후군·간수치(ALT 88)·중성지방(202)·요산(8.9) 관리 필요.",
+      "detail": "식단과 운동을 함께 조정하기로 함.\n재검 결과와 비교할 수 있게 이번 수치를 적어 둠.",
+      "follow": [
+        { "text": "내과 방문해 관리 계획 상담", "when": "12월 초중순" },
+        { "text": "건강검진 재검", "date": "2027-02-01", "precision": "month" }
+      ]
+    },
+    {
+      "id": "2026-11-18-quiz",
+      "date": "2026-11-18",
+      "theme": "family",
+      "status": "done",
+      "title": "공공기관 퀴즈 2건 응모",
+      "memo": "지진안전 퀴즈 등 2건 응모 완료.",
+      "follow": [
+        { "text": "지진안전 퀴즈 당첨자 발표 확인", "date": "2026-12-04" }
+      ]
+    },
+    {
+      "id": "2026-11-23-fukuoka",
+      "date": "2026-11-23",
+      "theme": "family",
+      "status": "done",
+      "title": "후쿠오카 태교여행 일정 확정",
+      "memo": "항공권과 일 팔라조 3박 예약 완료.",
+      "follow": [
+        { "text": "후쿠오카 태교여행 3박 4일", "date": "2027-01-07" }
+      ]
+    },
+    {
+      "id": "2026-11-25-tosil-note",
+      "date": "2026-11-25",
+      "theme": "tosil",
+      "status": "done",
+      "title": "출산·지원금 노트 제작",
+      "memo": "지원금·검진·휴직 계획을 한 페이지로 정리."
+    },
+    {
+      "id": "2026-11-25-card",
+      "date": "2026-11-25",
+      "theme": "family",
+      "status": "done",
+      "title": "NH농협 zgm.일본여행중 카드 2장 신청",
+      "memo": "12월 중 각 30만 원 실적을 채우면 혜택 대상.",
+      "follow": [
+        { "text": "각 30만 원 실적 채우기", "when": "12월 중" },
+        { "text": "카드 해지 검토", "date": "2027-01-25" }
+      ]
+    },
+    {
+      "id": "2026-11-26-triptrap",
+      "date": "2026-11-26",
+      "theme": "tosil",
+      "status": "done",
+      "title": "하카타 한큐 트립트랩 5in1 예약 완료",
+      "memo": "후쿠오카 현지에서 수령 예정.",
+      "follow": [
+        { "text": "하카타 한큐에서 현지 수령", "date": "2027-01-08" }
+      ]
+    },
+    {
+      "id": "2026-11-28-defect",
+      "date": "2026-11-28",
+      "theme": "home",
+      "status": "done",
+      "title": "단지 하자소송 세대 현장조사",
+      "memo": "전유부분 하자조사서 사본 보관.",
+      "detail": "거실·주방 — 도배, 수압, 싱크대 상판\n욕실 1·2 — 타일, 젠다이, 거울, 배수, 온수, 스피커폰\n창호 — 누수, 결로\n실외기실 — 실리콘, 균열\n안방 발코니 — 균열, 누수, 곰팡이\n현관 — 바람소리",
+      "follow": [
+        { "text": "법원 감정보고서 결과 발표 및 소송 진행 대기", "when": "일정 미정" }
+      ]
+    },
+    {
+      "id": "2026-12-02-bugaboo",
+      "date": "2026-12-02",
+      "theme": "tosil",
+      "status": "planned",
+      "title": "하카타 한큐 부가부 예약 확인",
+      "memo": "부가부 유모차 예약 상태 확인."
+    },
+    {
+      "id": "2026-12-04-quiz-result",
+      "date": "2026-12-04",
+      "theme": "family",
+      "status": "planned",
+      "title": "지진안전 퀴즈 당첨자 발표 확인",
+      "memo": "11/18 응모한 퀴즈 결과."
+    },
+    {
+      "id": "2026-12-08-blossom",
+      "date": "2026-12-08",
+      "theme": "tosil",
+      "status": "planned",
+      "title": "이와타야 블라썸39 1개월 전 확인 메일 대응",
+      "memo": "예약 확인 메일 오면 답장."
+    },
+    {
+      "id": "2026-12-12-concert",
+      "date": "2026-12-12",
+      "theme": "family",
+      "status": "planned",
+      "title": "백지영 콘서트 관람"
+    },
+    {
+      "id": "2026-12-20-artipoppe",
+      "date": "2026-12-20",
+      "theme": "tosil",
+      "status": "planned",
+      "title": "아티포페 아기띠 주문·호텔 배송 진행 확인",
+      "memo": "일본 호텔로 배송되는 일정 확인."
+    },
+    {
+      "id": "2026-12-22-checkup",
+      "date": "2026-12-22",
+      "theme": "tosil",
+      "status": "planned",
+      "title": "일신기독병원 정기검진 14:30",
+      "memo": "선택제왕 상담."
+    },
+    {
+      "id": "2026-12-29-card-event",
+      "date": "2026-12-29",
+      "theme": "family",
+      "status": "planned",
+      "title": "일본 1월 카드 이벤트 연장 여부 확인"
+    },
+    {
+      "id": "2027-01-07-trip",
+      "date": "2027-01-07",
+      "endDate": "2027-01-10",
+      "theme": "family",
+      "status": "planned",
+      "title": "후쿠오카 태교여행 3박 4일",
+      "memo": "1/7–1/10. 트립트랩·부가부 현지 수령 포함.",
+      "follow": [
+        { "text": "트립트랩 현지 수령", "date": "2027-01-08" }
+      ]
+    },
+    {
+      "id": "2027-01-25-card-cancel",
+      "date": "2027-01-25",
+      "theme": "family",
+      "status": "planned",
+      "title": "NH농협 zgm.일본여행중 카드 해지 검토",
+      "memo": "실적·혜택 정산 후 유지 여부 결정."
+    },
+    {
+      "id": "2027-02-01-recheck",
+      "date": "2027-02-01",
+      "precision": "month",
+      "theme": "family",
+      "status": "planned",
+      "title": "내과 건강검진 재검",
+      "memo": "2월 중 날짜가 정해지면 업데이트."
+    },
+    {
+      "id": "2027-03-08-leave",
+      "date": "2027-03-08",
+      "theme": "tosil",
+      "status": "planned",
+      "title": "아내 출산휴가 시작 (90일)",
+      "memo": "출산휴가 90일."
+    },
+    {
+      "id": "2027-04-12-due",
+      "date": "2027-04-12",
+      "theme": "tosil",
+      "status": "planned",
+      "title": "토실이 출산 예정일",
+      "memo": "만나러 가는 날.",
+      "follow": [
+        { "text": "출생신고·행복출산 원스톱 신청" },
+        { "text": "회사 출산선물 신청" }
+      ]
+    },
+    {
+      "id": "2027-06-06-parental-leave",
+      "date": "2027-06-06",
+      "theme": "tosil",
+      "status": "planned",
+      "title": "아내 육아휴직 시작 예정",
+      "memo": "출산휴가에 이어 170일 분할 사용안 검토."
+    },
+    {
+      "id": "2027-06-06-work-plan",
+      "date": "2027-06-06",
+      "theme": "work",
+      "status": "planned",
+      "title": "2027년 육아휴직 일정·근무일수 조율",
+      "memo": "평가대상 180일 이상 근무 조건과 출산휴가 20일을 함께 계산 중."
+    }
+  ]
+}

@@ -75,7 +75,7 @@ html.unlocked .lock{display:none}
 @media (hover:hover){
   .banner:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(60,44,30,.07),0 22px 40px -22px rgba(60,44,30,.55)}
   .banner:hover .banner__img{transform:scale(1.035)}
-  .banner:hover .banner__go{background:rgba(255,255,255,.96)}
+  .banner:hover .banner__go{background:rgba(255,255,255,.96);color:#241F1B}
 }
 .banner:active{transform:scale(.988)}
 
@@ -163,6 +163,16 @@ html.unlocked .lock{display:none}
 }
 .banner--home .banner__sub{color:#6B5335;opacity:1}
 .banner--home .banner__go{background:rgba(180,138,60,.95);color:#FFFDF8}
+
+/* 4 · 타임라인 — 햇살 드는 책상, 크림 막 + 진한 갈색 글자 */
+.banner--timeline{color:#3A2C1C;background:#FBF1DE}
+.banner--timeline .banner__veil{
+  background:
+    radial-gradient(126% 122% at 2% 104%,rgba(255,249,236,.96) 0%,rgba(255,247,230,.80) 40%,rgba(255,247,230,.18) 68%,rgba(255,247,230,0) 84%),
+    linear-gradient(180deg,rgba(255,250,240,.3) 0%,rgba(255,250,240,0) 40%);
+}
+.banner--timeline .banner__sub{color:#6B5335;opacity:1}
+.banner--timeline .banner__go{background:rgba(168,95,55,.95);color:#FFFDF8}
 
 /* ── 낮은 화면(가로 모드·작은 폰)에서도 스크롤 없이 ── */
 @media (max-height:660px){

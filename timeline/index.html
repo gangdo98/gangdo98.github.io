@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBF6EC">
+<meta name="robots" content="noindex, nofollow">
+<title>타임라인 · 우리 가족 기록 26.10 — 27.12</title>
+<meta name="description" content="2026년 10월부터 2027년 12월까지, 집·토실이·회사·가족·친구의 지난 기록과 앞으로의 예정을 분기 달력과 월별 리스트로 보는 가족 타임라인.">
+<link rel="icon" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%23A8DCC8'/%3E%3Ctext x='50' y='72' font-size='52' text-anchor='middle'%3E%F0%9F%97%93%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css?v=20261128a">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ───────── 히어로 ───────── -->
+  <header class="hero" id="top">
+    <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <div class="hero__top">
+        <p class="hero__kicker">우리 가족 기록 · 26.10 — 27.12</p>
+        <a class="homebtn" href="https://gangdo98.github.io/" aria-label="메인 포털로 돌아가기">
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 3.2 3 10.6h2.4V20h5.1v-5.4h3V20h5.1v-9.4H21L12 3.2Z"/></svg>
+          <span>메인</span>
+        </a>
+      </div>
+
+      <h1 class="hero__title">타임라인</h1>
+      <p class="hero__sub">지난 기록과 앞으로의 예정을 한곳에.<br>집 · 토실이 · 회사 · 가족 · 친구</p>
+      <p class="hero__today" id="todayLabel">2026년 11월 28일 토요일</p>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__label">기록</span>
+          <span class="stat__value"><span id="statDone">0</span><span class="stat__unit">건</span></span>
+          <span class="stat__meta">남겨 둔 일</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">예정</span>
+          <span class="stat__value"><span id="statPlanned">0</span><span class="stat__unit">건</span></span>
+          <span class="stat__meta">앞으로의 일</span>
+        </div>
+        <div class="stat stat--next">
+          <span class="stat__label">다음 일정</span>
+          <span class="stat__value stat__value--sm" id="statNext">—</span>
+          <span class="stat__meta" id="statNextMeta">불러오는 중</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ───────── 보기 전환 · 필터 ───────── -->
+  <div class="controls">
+    <div class="controls__inner">
+      <div class="viewswitch" role="tablist" aria-label="보기 방식">
+        <button class="viewswitch__btn is-active" type="button" role="tab" aria-selected="true" data-view="quarter">분기 달력</button>
+        <button class="viewswitch__btn" type="button" role="tab" aria-selected="false" data-view="month">월별 리스트</button>
+      </div>
+      <div class="chips" id="themeChips" role="group" aria-label="테마 필터"></div>
+      <div class="chips chips--status" id="statusChips" role="group" aria-label="상태 필터"></div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ───────── 1. 분기 달력 ───────── -->
+    <section class="panel is-active" id="panel-quarter" aria-label="분기 달력 보기">
+      <div class="qtrs" id="qtrTabs" role="tablist" aria-label="분기 선택"></div>
+      <div class="calendars" id="calendars" aria-live="polite"></div>
+
+      <div class="section">
+        <div class="section__head">
+          <h2 class="section__title" id="quarterListTitle">이 분기의 기록</h2>
+          <span class="section__count" id="quarterListCount"></span>
+        </div>
+        <div id="quarterList"></div>
+      </div>
+    </section>
+
+    <!-- ───────── 2. 월별 리스트 ───────── -->
+    <section class="panel" id="panel-month" aria-label="월별 리스트 보기" hidden>
+      <div class="section section--first">
+        <div class="section__head">
+          <h2 class="section__title">월별 기록 · 26.10 — 27.12</h2>
+          <span class="section__count" id="monthListCount"></span>
+        </div>
+        <div class="mlist" id="monthList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="foot__note">공개 페이지예요. 이름·동호수·연락처·예약번호는 넣지 않고 <b>토실이·아내·단지</b>처럼 부르는 말로만 적었어요.</p>
+    <p class="foot__links">
+      <a href="https://gangdo98.github.io/">메인</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://gangdo98.github.io/tosil-story/">토실이 준비 노트</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://gangdo98.github.io/tosil-home/">토실이 방</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://gangdo98.github.io/fukuoka-trip/">후쿠오카 여행</a>
+    </p>
+    <p class="foot__updated" id="footUpdated"></p>
+  </footer>
+</div>
+
+<script src="app.js?v=20261128a"></script>
+</body>
+</html>
