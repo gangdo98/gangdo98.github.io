@@ -54,4 +54,6 @@
 
 ## 배포
 
-`main` 브랜치 루트를 GitHub Pages로 씁니다. `styles.css?v=`·`app.js?v=`·`data/timeline.json?v=` 쿼리를 올리면 캐시가 갱신됩니다.
+- 현재 주소: https://gangdo98.github.io/timeline/ — `gangdo98/gangdo98.github.io` 저장소의 **`timeline/` 폴더**로 배포 중입니다. GitHub 연결에 저장소 생성 권한이 없어 별도 `gangdo98/timeline` 저장소를 만들지 못했습니다.
+- 나중에 `gangdo98/timeline` 저장소를 만들 수 있게 되면 이 폴더(`timeline/`, 자체 git 이력 있음)를 그대로 푸시하고 사이트 저장소의 폴더 사본만 지우면 됩니다. 주소는 바뀌지 않습니다.
+- 고칠 때는 원본 `timeline/`에서 고친 뒤 `portal/timeline/`으로 복사해 함께 커밋하세요. `styles.css?v=`·`app.js?v=`·`data/timeline.json?v=` 쿼리를 올리면 캐시가 갱신됩니다.
