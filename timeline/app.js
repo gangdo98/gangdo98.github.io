@@ -142,10 +142,10 @@
   /* ── 필터 칩 ──────────────────────────────── */
   function renderChips() {
     var themeHTML = '<button class="chip chip--all' + (state.theme === 'all' ? ' is-active' : '') +
-      '" type="button" data-theme="all" aria-pressed="' + (state.theme === 'all') + '">전체</button>';
+      '" type="button" data-filter-theme="all" aria-pressed="' + (state.theme === 'all') + '">전체</button>';
     themeHTML += THEMES.map(function (t) {
       var on = state.theme === t.id;
-      return '<button class="chip chip--theme' + (on ? ' is-active' : '') + '" type="button" data-theme="' + t.id +
+      return '<button class="chip chip--theme' + (on ? ' is-active' : '') + '" type="button" data-filter-theme="' + t.id +
         '" aria-pressed="' + on + '" style="--tc:' + t.deep + '">' +
         '<span aria-hidden="true">' + t.emoji + '</span>' + esc(t.label) + '</button>';
     }).join('');
@@ -154,7 +154,7 @@
     var statuses = [['all', '전체'], ['done', '기록'], ['planned', '예정']];
     $('#statusChips').innerHTML = statuses.map(function (s) {
       var on = state.status === s[0];
-      return '<button class="chip chip--status' + (on ? ' is-active' : '') + '" type="button" data-status="' + s[0] +
+      return '<button class="chip chip--status' + (on ? ' is-active' : '') + '" type="button" data-filter-status="' + s[0] +
         '" aria-pressed="' + on + '">' + s[1] + '</button>';
     }).join('');
   }
@@ -375,13 +375,13 @@
     var el;
     if ((el = e.target.closest('[data-view]'))) { setView(el.dataset.view); return; }
     if ((el = e.target.closest('[data-quarter]'))) { setQuarter(el.dataset.quarter); return; }
-    if ((el = e.target.closest('[data-theme]'))) {
-      state.theme = el.dataset.theme;
+    if ((el = e.target.closest('[data-filter-theme]'))) {
+      state.theme = el.dataset.filterTheme;
       render();
       return;
     }
-    if ((el = e.target.closest('[data-status]'))) {
-      state.status = el.dataset.status;
+    if ((el = e.target.closest('[data-filter-status]'))) {
+      state.status = el.dataset.filterStatus;
       render();
       return;
     }
